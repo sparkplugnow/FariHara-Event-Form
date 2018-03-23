@@ -92,7 +92,7 @@ class App extends React.Component {
 									<SelectEntry label="Colour Preference" options={ ['Black', 'Blue', 'Grey', 'Burgundy', 'White/Ivory', 'Patterned', 'Undecided'] } name="colourpreference" />
 									<SelectEntry label="Fabric Line" name="fabricline" options={ ['Associate $475', 'Professional $600', 'Executive $750', 'Presidential $1200'] }/>
 									<div className="buttons">
-										<button type="submit" className={`btn btn-success ${this.state.loading ? 'disabled' : 'active'}`}>Submit</button>
+										<button type="submit" className={`btn ${this.state.loading ? 'disabled' : 'active'}`}>Submit</button>
 									</div>
 								</form>
 				   			)}

@@ -11,6 +11,9 @@
 
 button {
   margin-right: 10px;
+  background-color: #1b2239;
+  color: white;
+  font-weight: bold;
 }
 
 .header {
@@ -31,6 +34,7 @@ button {
 
 label {
   font-weight: 700;
+  color: #3e4d7e;
 }
 
 .thankyou_main {
