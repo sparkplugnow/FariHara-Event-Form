@@ -5,7 +5,7 @@ const SelectEntry = ({label, options, name}) =>
 	<div className="form-group">
 			<label>{label}</label>
 			<Field name={name} component="select" className="form-control col-4">
-				{options.map((opt,  i) => 
+				{options.map((opt, i) => 
 					  		<option value={opt.toLowerCase()} key={i}>{opt}</option>
 					  	)}
 		    </Field>

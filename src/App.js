@@ -72,7 +72,7 @@ class App extends React.Component {
 				   				weddinglocation: '',
 				   				weddingcolourtheme: '',
 				   				bridesmaiddresscolour: '',
-				   				weddingparty: 'Yes',
+				   				weddingparty: 1,
 				   				weddingcloth: 'Suit',
 				   				colourpreference: 'Black',
 				   				fabricline: 'Associate $475',
@@ -87,7 +87,9 @@ class App extends React.Component {
 									<InputEntry label="Wedding Location" type="text" name="weddinglocation" />
 									<InputEntry label="Wedding Colour Theme" type="text" name="weddingcolourtheme" />
 									<InputEntry label="Bridesmaid Dress Colour" type="text" name="bridesmaiddresscolour" />
-									<SelectEntry label="Wedding Party?" options={ ['Yes' , 'No'] } name="weddingparty" />
+									<InputEntry label="Number of Groomsmen" value="1" type="number" name="weddingparty" />
+									{// TODO: Change the name of the above input here and on the server 	
+									}
 									<SelectEntry label="Wedding Cloth" options={ ['Suit', 'Tuxedo'] } name="weddingcloth" />
 									<SelectEntry label="Colour Preference" options={ ['Black', 'Blue', 'Grey', 'Burgundy', 'White/Ivory', 'Patterned', 'Undecided'] } name="colourpreference" />
 									<SelectEntry label="Fabric Line" name="fabricline" options={ ['Associate $475', 'Professional $600', 'Executive $750', 'Presidential $1200'] }/>

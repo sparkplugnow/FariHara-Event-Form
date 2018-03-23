@@ -37,7 +37,7 @@ const columns = [
                 accessor: 'weddingDate'
             },
             {
-                Header: 'Party?',
+                Header: 'Groomsmen',
                 accessor: 'weddingParty'
             }
         ]

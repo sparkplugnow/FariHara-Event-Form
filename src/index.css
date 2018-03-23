@@ -41,7 +41,8 @@ label {
 }
 
 .thankyou_main {
-  margin: 40px auto;
-  width: 90%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 500px;
+  flex-direction: column;
 }
