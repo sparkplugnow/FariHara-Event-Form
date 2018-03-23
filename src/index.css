@@ -1,0 +1,40 @@
+.container {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+button {
+  margin-right: 10px;
+}
+
+.header {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.errorView {
+  margin-top: 5px;
+  color: red;
+}
+
+.btn-viewform {
+  margin-top: 15px;
+}
+
+label {
+  font-weight: 700;
+}
+
+.thankyou_main {
+  margin: 40px auto;
+  width: 90%;
+  text-align: center;
+}
