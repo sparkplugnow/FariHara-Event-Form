@@ -20,6 +20,9 @@ button {
   padding: 15px;
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid #3e4d7e;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 
