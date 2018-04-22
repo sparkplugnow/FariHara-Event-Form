@@ -1,14 +1,11 @@
 import React from 'react';
 import { Field } from 'react-final-form';
 
-const SelectEntry = ({label, options, name}) =>
-	<div className="form-group">
-			<label>{label}</label>
-			<Field name={name} component="select" className="form-control col-4">
+const SelectEntry = ({label, options, name, value, optionChanged}) =>
+		<Field name={name&&name} component="select" value={value&&value} className="select_input" onChange={optionChanged}>
 				{options.map((opt, i) => 
-					  		<option value={opt.toLowerCase()} key={i}>{opt}</option>
-					  	)}
-		    </Field>
-	</div>
+				  		<option key={i}>{opt}</option>
+			  	)}
+	    </Field>
 	
 export default SelectEntry

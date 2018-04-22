@@ -1,13 +1,7 @@
-.container {
-  width: 90%;
-  margin: 40px auto;
+body {
+  font-family: 'Pathway Gothic One', sans-serif;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
 
 button {
   margin-right: 10px;
@@ -16,19 +10,53 @@ button {
   font-weight: bold;
 }
 
-.header {
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid #3e4d7e;
-  margin-bottom: 50px;
-  padding-bottom: 40px;
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 100vh;
+  }
+}
 
-.errorView {
-  margin-top: 5px;
-  color: red;
+.top_container {
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-direction: column;
+}
+
+.bottom_container {
+  height: 25%;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#icon {
+  height: 60px;
+  width: 60px;
+  margin: 15px 0;
+}
+
+#logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.sub_title {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+
+.warning {
+  font-family: serif;
+  font-style: italic;
+  color: #ababac;
+  font-size: 0.85em;
+  font-weight: 300;
 }
 
 .btn-viewform {
@@ -38,11 +66,276 @@ button {
 label {
   font-weight: 700;
   color: #3e4d7e;
+  font-size: 110%;
+}
+
+.thankyou_header {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
 }
 
 .thankyou_main {
   display: flex;
   align-items: center;
-  height: 500px;
   flex-direction: column;
+
+}
+
+.thankyou_main p {
+  font-size: 130%;
+}
+
+.thankyou_button, .thankyou_message {
+  margin: 2px 0;
+}
+
+.event_img {
+  width: 50%;
+  height: 50%;
+}
+
+input[type="text"] {
+  border: 1px solid #eee;
+  outline: none;
+  color: #a3a3a3;
+  font-size: 0.9em;
+  padding: 0.5em 0.8em;
+  width: 100%;
+  margin: 0 0 1em;
+}
+
+.before_entry {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: row;
+}
+
+.react-table {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.field {
+  border-bottom: 1px solid #e7e7e7;
+  height: 120px;
+}
+
+
+.form-label-title {
+  height: 100%;
+  text-transform: uppercase;
+  background: #fcfcfc;
+  border-right: 1px solid #f5f5f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  margin: 0;
+  color: #878789;
+}
+
+input.text_input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 100%;
+  text-align: left;
+  text-indent: 40px;
+  font-size: 2em;
+  font-family: serif;
+  font-style: italic;
+  color: #878789;
+  outline: none;
+  width: 100%;
+}
+
+input.text_input::placeholder {
+  color: #e5e5e8;
+  opacity: 1;
+}
+
+select.select_input {
+  margin: 0;
+  padding: 0 0 0 40px;
+  border: none;
+  height: 100%;
+  text-align: left;
+  font-size: 2em;
+  font-family: serif;
+  font-style: italic;
+  color: #878789;
+  outline: none;
+  width: 100%;
+}
+
+.date {
+  height: 100%;
+  padding-right: 20px !important;
+  border-right: 1px solid #edede7;
+}
+
+div.date {
+  display: inline-block;
+}
+
+
+.preferences button, button[type="submit"] {
+  appearance: none;
+  margin: 0;
+  font-weight: normal;
+  background: none;
+  cursor: pointer;
+  border: none;
+  height: 100%;
+  outline: none;
+}
+
+.preferences button {
+  border-right: 1px solid #e7e7e7;
+  color: #878789;
+  font-family: inherit;
+  text-align: center;
+  
+}
+
+.preferences button.active {
+  color: #c88b11;
+  border-bottom: 3px solid #c88b11;
+}
+
+.preferences button:hover {
+  color: #c88b11;
+  border-bottom: 3px solid #cfcfd0;
+}
+
+button[type="submit"] {
+  color: #f6f6f6;
+  font-family: serif;
+  font-style: italic;
+  width: 100%;
+  text-align: start;
+  text-indent: 40px;
+  font-size: 2.7em;
+}
+
+button[type="submit"].active {
+  color: #878789;
+}
+
+.field.submit {
+  border-bottom: none;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.thank_you, .thank_you p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  height: 100%;
+  weight: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .field {
+    height: auto;
+    border: none;
+  }
+ 
+  .form-label-title {
+    height: auto;
+    padding: 10px 30px;
+    border: none;
+    justify-content: start;
+    font-size: 0.9em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  input.text_input {
+    font-size: 1.35em;
+    text-indent: 50px;
+    padding: 15px 0;
+  }
+
+  .date {
+    padding-right: 0 !important;
+    font-size: 0.6em;
+  }
+
+  select.select_input {
+    padding: 15px 50px;
+    font-size: 1.35em;
+    background-color: white;
+  }
+
+  .preferences {
+    margin-bottom: 48px;
+  }
+
+  .preferences button {
+    font-size: 0.9em;
+    border-bottom: 1px solid #ededed;
+  }
+
+  .preferences button.active {
+    color: #c88b11;
+    border-bottom: 2px solid #c88b11;
+  }
+  .preferences button:hover {
+    border-bottom: 1px solid #cfcfd0;
+  }
+
+  button[type="submit"] {
+    font-size: 1.7em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: normal;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .preferences button {
+    width: 12.5%;
+  }
+}
+
+input[type="number"] {
+    width: 15%;
+}
+
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.table_container {
+  width: 98%;
+  margin: 40px auto 20px auto;
+}
+
+.table_header {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+/**
+ * Override Bootstrap grid classes
+ */
+.col-3, .col-4, .col-12, .col-md-1, .col-md-2, .col-md-4, .col-md-5, .col-md-6, .col-md-8, .col-md-10, .col-md-12 {
+  padding: 0;
 }

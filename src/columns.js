@@ -1,16 +1,20 @@
 const columns = [
     {
-        Header: 'Event',
+        Header: 'Details',
         columns: [
             {
-              Header: 'Date',
-              accessor: 'eventDate'
+              Header: 'Email',
+              accessor: 'email'
             },
             {
-              Header: 'Name',
-              accessor: 'eventName'
+              Header: 'Phone',
+              accessor: 'phone'
             },
         ]
+    },
+    {
+        Header: 'Event Date',
+        accessor: 'eventDate'
     },
     {
         Header: 'Names',
