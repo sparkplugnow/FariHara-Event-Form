@@ -41,7 +41,7 @@ class App extends React.Component {
 
 	submitForm = values => {
 		console.log('Submit form button clicked');
-		let finalValues = {...this.state.data, eventdate: this.makeDate()}, isFormFilled = true;
+		let finalValues = {...this.state.data, eventdate: this.makeDate()};
 		if (!finalValues.weddingdate || finalValues.day === "TBD" || finalValues.month === "TBD"  || finalValues.year === "TBD") {
 			finalValues.weddingdate = 'TBD';
 		}
@@ -230,10 +230,7 @@ class App extends React.Component {
 				year: val
 			}
 		}
-		}, () => {
-			this.checkFormFilled();
-			this.setMonthLimits();
-		});
+		}, () => this.setMonthLimits());
 	}
 
 	monthChanged = event => {
@@ -245,10 +242,7 @@ class App extends React.Component {
 				month: val
 			}
 		}
-		}, () => {
-			this.checkFormFilled();
-			this.setDayLimits();
-		});
+		}, () => this.setDayLimits());
 	}
 
 	dayChanged = event => {
