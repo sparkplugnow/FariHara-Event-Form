@@ -11,15 +11,12 @@ button {
 }
 
 .container-fluid {
-  margin: 0;
+  width: 95%;
+  margin: 0 auto;
   padding: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .header {
-    height: 100vh;
-  }
-}
+
 
 .top_container {
   height: 75%;
@@ -182,7 +179,7 @@ div.date {
 }
 
 
-.preferences button, button[type="submit"] {
+.preferences button {
   appearance: none;
   margin: 0;
   font-weight: normal;
@@ -211,18 +208,18 @@ div.date {
   border-bottom: 3px solid #cfcfd0;
 }
 
+
 button[type="submit"] {
-  color: #f6f6f6;
-  font-family: serif;
-  font-style: italic;
-  width: 100%;
-  text-align: start;
-  text-indent: 40px;
-  font-size: 2.7em;
+  text-align: center;
+  font-size: 1.2em;
 }
 
-button[type="submit"].active {
-  color: #878789;
+.submit_button {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .field.submit {
@@ -294,12 +291,6 @@ button[type="submit"].active {
     border-bottom: 1px solid #cfcfd0;
   }
 
-  button[type="submit"] {
-    font-size: 1.7em;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: normal;
-  }
 }
 
 @media only screen and (min-width: 768px) {

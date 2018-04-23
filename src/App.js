@@ -33,7 +33,6 @@ class App extends React.Component {
 				months: ["TBD"],
 				days: ["TBD"],
 			},
-			submitClass: "",
 			preferenceButtonState: ["", "", "", "", "", "", "", "active"],
 		}
 		this.phoneTextChanged = this.phoneTextChanged.bind(this);
@@ -50,11 +49,7 @@ class App extends React.Component {
 		if (finalValues.day !== "TBD" && finalValues.month !== "TBD" && finalValues.year !== "TBD") 
 			finalValues.weddingdate = `${finalValues.year}-${finalValues.month}-${finalValues.day}`;
 
-		for(var prop in finalValues) {
-			if (!finalValues[prop]) isFormFilled = false;
-		}
-
-		if(isFormFilled) this.setState(prevState => ({
+		this.setState(prevState => ({
 			loading: true,
 		}), () => {fetch('https://fariharaserver.now.sh/customers', {
 			body: JSON.stringify(finalValues),
@@ -90,7 +85,6 @@ class App extends React.Component {
 						day: "TBD",
 					},
 					switchView: !this.state.switchView,
-					submitClass: '',
 					dateData: {
 						months: ["TBD"],
 						days: ["TBD"],
@@ -112,132 +106,102 @@ class App extends React.Component {
 	phoneTextChanged = event => {
 		let val = event.target.value;
 		if (!isNaN(Number(val)))
-			this.setState(prevState => {
-				return {
+			this.setState({
 				data: {
 						...this.state.data,
 						phone: val,
 					}
-			}
-			}, () => this.checkFormFilled());
-		console.log(this.state.data);
+			});
 	}
 
 	emailTextChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				email: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	groomNameChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				groomsname: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	brideNameChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				bridesname: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	weddingLocationChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				weddinglocation: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	weddingColourThemeChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				weddingcolourtheme: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	bridesmaidColourChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				bridesmaiddresscolour: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	numberOfGroomsmenChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				weddingparty: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	weddingClothChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				weddingcloth: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	fabricLineChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				fabricline: val,
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	setColourPreference = event => {
@@ -248,16 +212,13 @@ class App extends React.Component {
 			if (colour === val) 
 				positions[index] = "active";
 		});
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				colourpreference: val
 			},
 			preferenceButtonState: positions,
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	yearChanged = event => {
@@ -273,7 +234,6 @@ class App extends React.Component {
 			this.checkFormFilled();
 			this.setMonthLimits();
 		});
-		console.log(this.state.data);
 	}
 
 	monthChanged = event => {
@@ -289,20 +249,16 @@ class App extends React.Component {
 			this.checkFormFilled();
 			this.setDayLimits();
 		});
-		console.log(this.state.data);
 	}
 
 	dayChanged = event => {
 		let val = event.target.value;
-		this.setState(prevState => {
-			return {
+		this.setState({
 			data: {
 				...this.state.data,
 				day: val
 			}
-		}
-		}, () => this.checkFormFilled());
-		console.log(this.state.data);
+		});
 	}
 
 	setMonthLimits = () => {
@@ -381,41 +337,18 @@ class App extends React.Component {
 		}
 	}
 
-	checkFormFilled = () => {
-		console.log('Checked if form is filled');
-		let values = this.state.data, isFormFilled = true;
-		for (var prop in values) {
-			if (!values[prop]) isFormFilled = false;
-		}
-		if (isFormFilled)
-			this.setState({
-				submitClass: 'active',
-			});
-	}
 
 	render() {
 		return (
 				<div className="App">
 				   <div className="container-fluid">
-					   <div className="row">
-						   <div className="col-md-3">
-							    <div className="header">
+					          <div className="header">
 							    	<div className="top_container">
 							    		<img id="icon" src={require('./images/logs.png')} alt="icon" />
 								   		<img id="logo" src={require('./images/logo.png')} alt="logo" />
 							   		</div>
-							   		<div className="bottom_container">
-							   			<p className="sub_title">
-								   			<span>You both deserve the perfect look,</span>
-								   			<br />
-								   			<span>for the perfect day</span>
-							   			</p>
-							   			<p className="warning">All fields are required except for your wedding date if yet to be determined.</p>
-						   			</div>
 							   	</div>
-					   		</div>
-					   		<div className="col-md-9">
-						   		{!this.state.switchView ? 
+					   			{!this.state.switchView ? 
 						   		<div>
 							   		<Form
 							   			initialValues={this.state.data}
@@ -509,15 +442,19 @@ class App extends React.Component {
 											   			<PreferenceButton buttonClicked={this.setColourPreference} selectState={this.state.preferenceButtonState[7]} label="Undecided" />
 											   		</div>
 										   		</div>
-										   		<div className="row field submit">
-											   		<button type="submit" className={this.state.submitClass}>Complete Submission</button>
+										   		<div className="row submit">
+											   		<div className="submit_button">
+											   		{this.state.loading ?
+											   			<button type="submit" disabled className="btn">Submit</button> 
+												   		:
+												   		<button type="submit" className="btn">Submit</button>
+											   		}
+											   		</div>
 										   		</div>
 											</form>
 							   			)}
 						   			/>
 					   			</div> : <div className="thank_you"><p>Thank You</p></div> }
-				   			</div>
-			   			</div>
 					</div>
 				</div>
 			)
