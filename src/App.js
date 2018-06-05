@@ -350,18 +350,6 @@ class App extends React.Component {
 							   			render={( { values, handleSubmit, reset } ) => (
 							   				<form onSubmit={handleSubmit}>
 							   					<div className="row field">
-											   		<FormLabel title="Phone" />
-											   		<div className="col-12 col-md-10">
-											   			<InputEntry textChanged={this.phoneTextChanged} value={this.state.data.phone} type="tel" name="phone" placeholder="Phone Number" />
-											   		</div>
-										   		</div>
-										   		<div className="row field">
-											   		<FormLabel title="E-mail" />
-											   		<div className="col-12 col-md-10">
-											   			<InputEntry textChanged={this.emailTextChanged} value={this.state.data.email} type="email" name="email" placeholder="E-mail" />
-											   		</div>
-										   		</div>
-							   					<div className="row field">
 											   		<FormLabel title="Groom's Name" />
 											   		<div className="col-12 col-md-10">
 											   			<InputEntry textChanged={this.groomNameChanged} value={this.state.data.groomsname} type="text" name="groomsname" placeholder="Groom's Name" />
@@ -371,6 +359,18 @@ class App extends React.Component {
 											   		<FormLabel title="Bride's Name" />
 											   		<div className="col-12 col-md-10">
 											   			<InputEntry textChanged={this.brideNameChanged} value={this.state.data.bridesname} type="text" name="bridesname" placeholder="Bride's Name" />
+											   		</div>
+										   		</div>
+							   					<div className="row field">
+											   		<FormLabel title="Phone" />
+											   		<div className="col-12 col-md-10">
+											   			<InputEntry textChanged={this.phoneTextChanged} value={this.state.data.phone} type="tel" name="phone" placeholder="Phone Number" />
+											   		</div>
+										   		</div>
+										   		<div className="row field">
+											   		<FormLabel title="E-mail" />
+											   		<div className="col-12 col-md-10">
+											   			<InputEntry textChanged={this.emailTextChanged} value={this.state.data.email} type="email" name="email" placeholder="E-mail" />
 											   		</div>
 										   		</div>
 										   		<div className="row field">
