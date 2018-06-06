@@ -1,10 +1,31 @@
-import React from 'react';
-import { Field } from 'react-final-form';
+import React from "react";
+import { Field } from "react-final-form";
+import PropTypes from "prop-types";
 
-const InputEntry = ( {label, type, name, value} ) => 
-	<div className="form-group">
-		<label>{label}</label>
-	    <Field name={name} component="input" min={type==='number'&&1} value={value&&value} type={type} className={`form-control col-${type==="date" ? 4: type==="number" ? 2: 12}`} />
-	</div>
-	
-export default InputEntry
+const InputEntry = ({ type, name, value, placeholder, min, textChanged }) => (
+  <Field
+    name={name}
+    component="input"
+    value={value}
+    type={type}
+    placeholder={placeholder}
+    min={min}
+    className="textInput"
+    onChange={textChanged}
+  />
+);
+
+InputEntry.propTypes = {
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  min: PropTypes.string,
+  textChanged: PropTypes.func
+};
+
+InputEntry.defaultProps = {
+  placeholder: "",
+  min: "",
+  textChanged: f => f
+};
+export default InputEntry;
