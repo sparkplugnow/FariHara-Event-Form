@@ -107,10 +107,14 @@ class App extends React.Component {
               });
             }, 5000);
           })
-          .catch(err => console.error(err));
-      }
-    );
-  };
+          .catch(err => {
+			  console.error(err);
+			  this.setState({
+				  loading: false
+			  });
+      });
+  });
+}
 
   makeDate = () => {
     let date = new Date();
@@ -375,7 +379,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="container-fluid">
+        <div className="containerFluid">
           <div className="header">
             <div className="topContainer">
               <img id="icon" src={require("./images/logs.png")} alt="icon" />
@@ -386,7 +390,7 @@ class App extends React.Component {
             <div>
               <Form
                 initialValues={this.state.data}
-                onSubmit={!this.state.loading ? this.submitForm : () => {}}
+                onSubmit={!this.state.loading ? this.submitForm : f => f}
                 render={({ values, handleSubmit, reset }) => (
                   <form onSubmit={handleSubmit}>
                     <div className="row field">

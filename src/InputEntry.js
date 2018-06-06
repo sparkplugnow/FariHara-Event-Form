@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 
 const InputEntry = ({ type, name, value, placeholder, min, textChanged }) => (
   <Field
-    name
+    name={name}
     component="input"
-    value
-    type
-    placeholder
-    min
+    value={value}
+    type={type}
+    placeholder={placeholder}
+    min={min}
     className="textInput"
     onChange={textChanged}
   />
@@ -18,14 +18,12 @@ const InputEntry = ({ type, name, value, placeholder, min, textChanged }) => (
 InputEntry.propTypes = {
   type: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  value: PropTypes.string,
   placeholder: PropTypes.string,
   min: PropTypes.string,
   textChanged: PropTypes.func
 };
 
 InputEntry.defaultProps = {
-  value: "",
   placeholder: "",
   min: "",
   textChanged: f => f

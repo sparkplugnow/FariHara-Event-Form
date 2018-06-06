@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 const SelectEntry = ({ options, name, value, optionChanged }) => (
   <Field
-    name
+    name={name}
     component="select"
-    value
+    value={value}
     className="selectInput"
     onChange={optionChanged}
   >
@@ -21,7 +21,7 @@ SelectEntry.propTypes = {
   optionChanged: PropTypes.func
 };
 
-InputEntry.defaultProps = {
+SelectEntry.defaultProps = {
   value: "",
   optionChanged: f => f
 };
