@@ -1,7 +1,6 @@
 body {
-  font-family: 'Pathway Gothic One', sans-serif;
+  font-family: "Pathway Gothic One", sans-serif;
 }
-
 
 button {
   margin-right: 10px;
@@ -16,17 +15,15 @@ button {
   padding: 0;
 }
 
-
-
-.top_container {
+.topContainer {
   height: 75%;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   flex-direction: column;
 }
 
-.bottom_container {
+.bottomContainer {
   height: 25%;
   text-align: center;
   padding: 0 15px;
@@ -43,7 +40,7 @@ button {
   margin-bottom: 20px;
 }
 
-.sub_title {
+.subTitle {
   margin: 0 0 20px 0;
   font-size: 16px;
 }
@@ -66,29 +63,29 @@ label {
   font-size: 110%;
 }
 
-.thankyou_header {
+.confirmationViewHeader {
   padding: 15px;
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
 }
 
-.thankyou_main {
+.confirmationViewMain {
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
 
-.thankyou_main p {
+.confirmationViewMain p {
   font-size: 130%;
 }
 
-.thankyou_button, .thankyou_message {
+.confirmationViewButton,
+.confirmationViewMessage {
   margin: 2px 0;
 }
 
-.event_img {
+.eventImg {
   width: 50%;
   height: 50%;
 }
@@ -103,7 +100,7 @@ input[type="text"] {
   margin: 0 0 1em;
 }
 
-.before_entry {
+.beforeEntry {
   display: flex;
   margin-bottom: 10px;
   flex-direction: row;
@@ -119,7 +116,6 @@ input[type="text"] {
   height: 120px;
 }
 
-
 .form-label-title {
   height: 100%;
   text-transform: uppercase;
@@ -134,7 +130,7 @@ input[type="text"] {
   color: #878789;
 }
 
-input.text_input {
+input.textInput {
   margin: 0;
   padding: 0;
   border: none;
@@ -149,12 +145,12 @@ input.text_input {
   width: 100%;
 }
 
-input.text_input::placeholder {
+input.textInput::placeholder {
   color: #e5e5e8;
   opacity: 1;
 }
 
-select.select_input {
+select.selectInput {
   margin: 0;
   padding: 0 0 0 40px;
   border: none;
@@ -178,7 +174,6 @@ div.date {
   display: inline-block;
 }
 
-
 .preferences button {
   appearance: none;
   margin: 0;
@@ -195,7 +190,6 @@ div.date {
   color: #878789;
   font-family: inherit;
   text-align: center;
-  
 }
 
 .preferences button.active {
@@ -208,13 +202,12 @@ div.date {
   border-bottom: 3px solid #cfcfd0;
 }
 
-
 button[type="submit"] {
   text-align: center;
   font-size: 1.2em;
 }
 
-.submit_button {
+.submitButton {
   margin: 20px 0;
   width: 100%;
   display: flex;
@@ -232,7 +225,8 @@ button[type="submit"] {
   justify-content: start;
 }
 
-.thank_you, .thank_you p {
+.thankYou,
+.thankYou p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -246,7 +240,7 @@ button[type="submit"] {
     height: auto;
     border: none;
   }
- 
+
   .form-label-title {
     height: auto;
     padding: 10px 30px;
@@ -257,7 +251,7 @@ button[type="submit"] {
     padding-bottom: 20px;
   }
 
-  input.text_input {
+  input.textInput {
     font-size: 1.35em;
     text-indent: 50px;
     padding: 15px 0;
@@ -268,7 +262,7 @@ button[type="submit"] {
     font-size: 0.6em;
   }
 
-  select.select_input {
+  select.selectInput {
     padding: 15px 50px;
     font-size: 1.35em;
     background-color: white;
@@ -290,7 +284,6 @@ button[type="submit"] {
   .preferences button:hover {
     border-bottom: 1px solid #cfcfd0;
   }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -300,9 +293,8 @@ button[type="submit"] {
 }
 
 input[type="number"] {
-    width: 15%;
+  width: 15%;
 }
-
 
 .buttons {
   margin-top: 15px;
@@ -311,12 +303,12 @@ input[type="number"] {
   justify-content: center;
 }
 
-.table_container {
+.tableContainer {
   width: 98%;
   margin: 40px auto 20px auto;
 }
 
-.table_header {
+.tableHeader {
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -327,6 +319,16 @@ input[type="number"] {
 /**
  * Override Bootstrap grid classes
  */
-.col-3, .col-4, .col-12, .col-md-1, .col-md-2, .col-md-4, .col-md-5, .col-md-6, .col-md-8, .col-md-10, .col-md-12 {
+.col-3,
+.col-4,
+.col-12,
+.col-md-1,
+.col-md-2,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-8,
+.col-md-10,
+.col-md-12 {
   padding: 0;
 }
