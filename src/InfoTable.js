@@ -21,7 +21,7 @@ class InfoTable extends React.Component {
         };
       },
       () => {
-        fetch("https://fariharaserver.now.sh/customers", { method: "GET" })
+        fetch("http://localhost:3005/customers", { method: "GET" })
           .then(response => response.json())
           .then(data => {
             this.setState({
@@ -41,7 +41,7 @@ class InfoTable extends React.Component {
         encodeURIComponent(JSON.stringify(this.state.data));
       var downloadAnchorNode = document.createElement("a");
       downloadAnchorNode.setAttribute("href", dataStr);
-      downloadAnchorNode.setAttribute("download", "fariharaData.json");
+      downloadAnchorNode.setAttribute("download", "`fariha`raData.json");
       downloadAnchorNode.click();
       downloadAnchorNode.remove();
     }

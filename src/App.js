@@ -16,15 +16,15 @@ class App extends React.Component {
         phone: "",
         email: "",
         groomsname: "",
-        bridesname: "",
+        // bridesname: "",
         weddingdate: "TBD",
         weddinglocation: "",
         weddingcolourtheme: "",
-        bridesmaiddresscolour: "",
+        // bridesmaiddresscolour: "",
         weddingparty: 1,
-        weddingcloth: "Suit",
+        // weddingcloth: "Suit",
         colourpreference: "Undecided",
-        fabricline: "Associate $475",
+        // fabricline: "Associate $475",
         year: "TBD",
         month: "TBD",
         day: "TBD"
@@ -56,9 +56,7 @@ class App extends React.Component {
       finalValues.month !== "TBD" &&
       finalValues.year !== "TBD"
     )
-      finalValues.weddingdate = `${finalValues.year}-${finalValues.month}-${
-        finalValues.day
-      }`;
+      finalValues.weddingdate = `${finalValues.year}-${finalValues.month}-${finalValues.day}`;
 
     this.setState(
       prevState => ({
@@ -85,15 +83,15 @@ class App extends React.Component {
                   phone: "",
                   email: "",
                   groomsname: "",
-                  bridesname: "",
+                  // bridesname: "",
                   weddingdate: "TBD",
                   weddinglocation: "",
                   weddingcolourtheme: "",
-                  bridesmaiddresscolour: "",
+                  // bridesmaiddresscolour: "",
                   weddingparty: 1,
-                  weddingcloth: "Suit",
+                  // weddingcloth: "Suit",
                   colourpreference: "Undecided",
-                  fabricline: "Associate $475",
+                  // fabricline: "Associate $475",
                   year: "TBD",
                   month: "TBD",
                   day: "TBD"
@@ -108,13 +106,14 @@ class App extends React.Component {
             }, 5000);
           })
           .catch(err => {
-			  console.error(err);
-			  this.setState({
-				  loading: false
-			  });
-      });
-  });
-}
+            console.error(err);
+            this.setState({
+              loading: false
+            });
+          });
+      }
+    );
+  };
 
   makeDate = () => {
     let date = new Date();
@@ -154,7 +153,7 @@ class App extends React.Component {
     });
   };
 
-  brideNameChanged = event => {
+  /* brideNameChanged = event => {
     let val = event.target.value;
     this.setState({
       data: {
@@ -162,7 +161,7 @@ class App extends React.Component {
         bridesname: val
       }
     });
-  };
+  }; */
 
   weddingLocationChanged = event => {
     let val = event.target.value;
@@ -184,7 +183,7 @@ class App extends React.Component {
     });
   };
 
-  bridesmaidColourChanged = event => {
+  /* bridesmaidColourChanged = event => {
     let val = event.target.value;
     this.setState({
       data: {
@@ -192,7 +191,7 @@ class App extends React.Component {
         bridesmaiddresscolour: val
       }
     });
-  };
+  }; */
 
   numberOfGroomsmenChanged = event => {
     let val = event.target.value;
@@ -204,7 +203,7 @@ class App extends React.Component {
     });
   };
 
-  weddingClothChanged = event => {
+  /* weddingClothChanged = event => {
     let val = event.target.value;
     this.setState({
       data: {
@@ -212,9 +211,9 @@ class App extends React.Component {
         weddingcloth: val
       }
     });
-  };
+  }; */
 
-  fabricLineChanged = event => {
+  /*fabricLineChanged = event => {
     let val = event.target.value;
     this.setState({
       data: {
@@ -222,7 +221,7 @@ class App extends React.Component {
         fabricline: val
       }
     });
-  };
+  }; */
 
   setColourPreference = event => {
     let val = event.target.innerHTML,
@@ -405,7 +404,7 @@ class App extends React.Component {
                         />
                       </div>
                     </div>
-                    <div className="row field">
+                    {/* <div className="row field">
                       <FormLabel title="Bride's Name" />
                       <div className="col-12 col-md-10">
                         <InputEntry
@@ -416,7 +415,7 @@ class App extends React.Component {
                           placeholder="Bride's Name"
                         />
                       </div>
-                    </div>
+                    </div> */}
                     <div className="row field">
                       <FormLabel title="Phone" />
                       <div className="col-12 col-md-10">
@@ -465,7 +464,7 @@ class App extends React.Component {
                         />
                       </div>
                     </div>
-                    <div className="row field">
+                    {/* <div className="row field">
                       <FormLabel title="Dress Colour" />
                       <div className="col-12 col-md-10">
                         <InputEntry
@@ -476,7 +475,7 @@ class App extends React.Component {
                           placeholder="Bridesmaid Dress Colour"
                         />
                       </div>
-                    </div>
+                    </div> */}
                     <div className="row field">
                       <FormLabel title="Number of Groomsmen" />
                       <div className="col-12 col-md-10">
@@ -489,7 +488,7 @@ class App extends React.Component {
                         />
                       </div>
                     </div>
-                    <div className="row field">
+                    {/*<div className="row field">
                       <FormLabel title="Wedding Fabric" />
                       <div className="col-12 col-md-10">
                         <SelectEntry
@@ -499,8 +498,8 @@ class App extends React.Component {
                           name="weddingcloth"
                         />
                       </div>
-                    </div>
-                    <div className="row field">
+                  </div> */}
+                    {/*<div className="row field">
                       <FormLabel title="Fabric Line" />
                       <div className="col-12 col-md-10">
                         <SelectEntry
@@ -515,7 +514,7 @@ class App extends React.Component {
                           ]}
                         />
                       </div>
-                    </div>
+                        </div> */}
                     <div className="row field">
                       <FormLabel title="Wedding Date" />
                       <div className="col-12 col-md-10">

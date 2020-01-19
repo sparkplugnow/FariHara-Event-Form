@@ -16,7 +16,7 @@ const columns = [
     Header: "Event Date",
     accessor: "eventDate"
   },
-  {
+  /*{
     Header: "Names",
     columns: [
       {
@@ -28,6 +28,10 @@ const columns = [
         accessor: "brideName"
       }
     ]
+  },*/
+  {
+    Header: "Groom",
+    accessor: "groomName"
   },
   {
     Header: "Wedding",
@@ -46,7 +50,7 @@ const columns = [
       }
     ]
   },
-  {
+  /*{
     Header: "Colour",
     columns: [
       {
@@ -62,8 +66,21 @@ const columns = [
         accessor: "colourPreference"
       }
     ]
-  },
+  },*/
   {
+    Header: "Colour",
+    columns: [
+      {
+        Header: "Wedding Theme",
+        accessor: "weddingColourTheme"
+      },
+      {
+        Header: "Preference",
+        accessor: "colourPreference"
+      }
+    ]
+  },
+  /*{
     Header: "Fabric",
     columns: [
       {
@@ -75,7 +92,7 @@ const columns = [
         accessor: "fabricLine"
       }
     ]
-  }
+  }*/
 ];
 
 export default columns;
