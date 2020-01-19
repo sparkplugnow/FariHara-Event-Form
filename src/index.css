@@ -128,6 +128,7 @@ input[type="text"] {
   letter-spacing: 0.1em;
   margin: 0;
   color: #878789;
+  font-family: 'Cormorant', serif;
 }
 
 input.textInput {
@@ -138,7 +139,7 @@ input.textInput {
   text-align: left;
   text-indent: 40px;
   font-size: 2em;
-  font-family: serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: italic;
   color: #878789;
   outline: none;
@@ -157,7 +158,7 @@ select.selectInput {
   height: 100%;
   text-align: left;
   font-size: 2em;
-  font-family: serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: italic;
   color: #878789;
   outline: none;
@@ -188,7 +189,7 @@ div.date {
 .preferences button {
   border-right: 1px solid #e7e7e7;
   color: #878789;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
