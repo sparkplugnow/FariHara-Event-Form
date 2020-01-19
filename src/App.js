@@ -63,7 +63,7 @@ class App extends React.Component {
         loading: true
       }),
       () => {
-        fetch("http://localhost:3005/customers", {
+        fetch("https://fariharaserver.now.sh/customers", {
           body: JSON.stringify(finalValues),
           method: "POST",
           headers: {

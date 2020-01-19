@@ -21,7 +21,7 @@ class InfoTable extends React.Component {
         };
       },
       () => {
-        fetch("http://localhost:3005/customers", { method: "GET" })
+        fetch("https://fariharaserver.now.sh/customers", { method: "GET" })
           .then(response => response.json())
           .then(data => {
             this.setState({
